@@ -8,6 +8,17 @@ The installer downloads the selected Ruwa version, builds the project, installs 
 
 ![Ruwa Linux Installer](assets/Installed_Ruwa.png)
 
+## Quick Start
+
+Download the latest pre-compiled **AppImage** directly from [Releases](../../releases):
+
+```bash
+chmod +x Ruwa-*.AppImage
+./Ruwa-*.AppImage
+```
+
+## Manual Installation (Build from Source)
+
 ## Features
 
 - Select the Ruwa version to install
@@ -41,7 +52,7 @@ sudo dnf install python3 python3-devel cmake ninja-build git gcc gcc-c++ qt6-qtb
 ```
 
 
-## Installation
+## Installation Steps
 ### Source code
 ```bash
 git clone https://github.com/0xAK-dev/Ruwa-Linux-Installer.git
@@ -50,11 +61,4 @@ python3 -m venv venv
 source venv/bin/activate
 python -m pip install -r requirements.txt
 python installer_window.py
-```
-
-### AppImage
-Download the latest AppImage from [Releases](../../releases).
-```bash
-chmod +x Ruwa-0.3.3-alpha-x86_64.AppImage
-./Ruwa-0.3.3-alpha-x86_64.AppImage
 ```

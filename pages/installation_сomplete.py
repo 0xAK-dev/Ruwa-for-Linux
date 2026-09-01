@@ -54,7 +54,7 @@ class WorkerThread(QThread):
             self.failed.emit(
                 f"Missing dependencies: {' '.join(missing_pkg)}\n"
                 f"To install them, run:\n"
-                f"sudo {" ".join(installer.get_package_install_command(distro, like))} {' '.join(missing_pkg)}"
+                f"sudo {''.join(installer.get_package_install_command(distro, like))} {' '.join(missing_pkg)}"
             )
             return
 
