@@ -26,7 +26,7 @@ class SetupOptions(QWidget):
         self.setFixedSize(720, 540)
 
         self.main_layout = QVBoxLayout(self)
-        self.main_layout.setSpacing(16)
+        self.main_layout.setSpacing(12)
         self.setContentsMargins(50, 40, 50, 10)
         title_label = QLabel(text="Setup options")
 
@@ -61,6 +61,10 @@ class SetupOptions(QWidget):
             radius=5,
         )
         self.checkbox4 = CheckBox(
+            text="Force NVIDIA driver selection for OpenGL (__GLX_VENDOR_LIBRARY_NAME=nvidia)",
+            radius=5,
+        )
+        self.checkbox5 = CheckBox(
             text="Disable BUILD_TESTING (-DBUILD_TESTING=OFF)",
             radius=5,
         )
@@ -102,6 +106,7 @@ class SetupOptions(QWidget):
         self.main_layout.addWidget(self.checkbox2)
         self.main_layout.addWidget(self.checkbox3)
         self.main_layout.addWidget(self.checkbox4)
+        self.main_layout.addWidget(self.checkbox5)
         self.main_layout.addStretch()
         self.main_layout.addLayout(nav_layout)
 
@@ -132,6 +137,9 @@ class SetupOptions(QWidget):
             options["QT_QPA_PLATFORMTHEME"] = "xdgdesktopportal"
 
         if self.checkbox4.isChecked():
+            options["__GLX_VENDOR_LIBRARY_NAME"] = "nvidia"
+
+        if self.checkbox5.isChecked():
             options["-DBUILD_TESTING"] = "OFF"
 
         return options
@@ -141,12 +149,13 @@ class SetupOptions(QWidget):
 
         self.checkbox2.setVisible(visible)
         self.checkbox3.setVisible(visible)
+        self.checkbox4.setVisible(visible)
 
         if not visible:
             self.checkbox2.setChecked(False)
             self.checkbox3.setChecked(False)
+            self.checkbox4.setChecked(False)
 
     def showEvent(self, event) -> None:
         self.animator = AnimateWidget(self.main_layout)
         self.animator.animate_widget()
-
