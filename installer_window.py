@@ -13,7 +13,7 @@ from pages.select_version import SelectRuwaVersion
 from pages.setup_options import SetupOptions
 from pages.welcome_page import WelcomePage
 from resources.styles import stylesheet
-from widget.page_indicator import PageIndicator
+from widgets.page_indicator import PageIndicator
 
 logging.basicConfig(
     level=logging.INFO,

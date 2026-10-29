@@ -4,7 +4,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QFileDialog, QLineEdit
 
-from widget.button import CapsuleButton
+from widgets.button import CapsuleButton
 
 
 class PathSelector(QLineEdit):

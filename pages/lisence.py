@@ -12,9 +12,9 @@ from PySide6.QtWidgets import (
 
 from resources.styles import stylesheet
 from utils.lisence_text import LICENSE
-from widget.button import CapsuleButton
-from widget.checkbox import CheckBox
-from widget.custom_widget import AnimateWidget
+from widgets.button import CapsuleButton
+from widgets.checkbox import CheckBox
+from widgets.custom_widget import AnimateWidget
 
 
 class LicensePage(QWidget):

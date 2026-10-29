@@ -4,8 +4,8 @@ from PySide6.QtWidgets import QAbstractItemView, QFrame, QHBoxLayout, QLabel, QL
 
 from config import VERSIONS
 from resources.styles.stylesheet import list_widget, scrollbar_style
-from widget.button import CapsuleButton
-from widget.custom_widget import AnimateWidget
+from widgets.button import CapsuleButton
+from widgets.custom_widget import AnimateWidget
 
 class SelectRuwaVersion(QWidget):
     version_select_request = Signal(str)

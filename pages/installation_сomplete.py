@@ -15,9 +15,9 @@ from PySide6.QtWidgets import (
 from core.installer import RuwaInstaller
 from resources.styles import stylesheet
 from utils.exceptions import UnsupportedDistributionError
-from widget.button import CapsuleButton
-from widget.custom_widget import AnimateWidget
-from widget.loading_widget import LoadingWidget
+from widgets.button import CapsuleButton
+from widgets.custom_widget import AnimateWidget
+from widgets.loading_widget import LoadingWidget
 
 logger = logging.getLogger(__name__)
 

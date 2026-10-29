@@ -7,8 +7,8 @@ from PySide6.QtWidgets import (
 )
 
 from resources.styles import stylesheet
-from widget.button import CapsuleButton
-from widget.custom_widget import AnimateWidget
+from widgets.button import CapsuleButton
+from widgets.custom_widget import AnimateWidget
 
 
 class WelcomePage(QWidget):

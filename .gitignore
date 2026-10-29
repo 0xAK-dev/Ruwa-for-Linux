@@ -4,3 +4,4 @@ __pycache__/
 installer_window.bin
 installer_window.onefile-build/
 venv
+.ruff_cache/
